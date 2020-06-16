@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link type="text/css" rel="stylesheet" href="style.css"> </link>
+<title> SRAIL_승차권 결제 </title>
+</head>
+<body>
+<table border="1">
+<tr>
+<td> 총 결제금액은 <!-- 이 곳에 결제금액 받아오는 파라미터 집어넣을 것 -->X원입니다. </td>
+</tr>
+</table>
+<br>
+<table border="1">
+<tr>
+<td> 간편결제 </td>
+<td> 신용카드 </td>
+<td> 계좌이체 </td>
+</tr>
+</table>
+<br>
+<table border="1">
+<tr>
+<td> 카드 종류 </td>
+<td>
+<input type="radio" name="card" value="personal" checked> 개인카드
+<input type="radio" name="card" value="corporation"> 법인카드
+</td>
+</tr>
+<tr>
+<td> 신용카드 번호 </td>
+<td>
+  <input type="number" name="cardNumber" style="width:50px">-<input type="password" name="cardNumber" style="width:50px">-<input type="password" name="cardNumber" style="width:50px">-<input type="number" name="cardNumber" style="width:50px">
+</td>
+</tr>
+<tr>
+<td> 유효기간 </td>
+<td>
+<select name="month" style="width:100px; height:25px">
+	<option value="선택">선택</option>
+	<option value="01">01</option>
+	<option value="02">02</option>
+	<option value="03">03</option>
+	<option value="04">04</option>
+	<option value="05">05</option>
+	<option value="06">06</option>
+	<option value="07">07</option>
+	<option value="08">08</option>
+	<option value="09">09</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+</select>
+
+월
+
+<select name="year" style="width:100px; height:25px">
+	<option value="선택">선택</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	<option value="2022">2022</option>
+	<option value="2023">2023</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+</select>
+
+년
+
+</td>
+</tr>
+<tr>
+<td> 할부 설정 </td>
+<td>
+<select name="month" style="width:100px; height:25px">
+	<option value="일시불">일시불</option>
+	<option value="1">1개월</option>
+	<option value="2">2개월</option>
+	<option value="3">3개월</option>
+	<option value="4">4개월</option>
+	<option value="5">5개월</option>
+	<option value="6">6개월</option>
+	<option value="7">7개월</option>
+	<option value="8">8개월</option>
+	<option value="9">9개월</option>
+	<option value="10">10개월</option>
+	<option value="11">11개월</option>
+	<option value="12">12개월</option>
+</select>
+</td>
+</tr>
+<tr>
+<td> 신용카드 비밀번호 </td>
+<td><input type="number" name="cardNumber" style="width:50px"> **(앞 2자리) </td>
+</tr>
+<tr>
+<td> 인증번호 </td>
+<td><input type="number" name="cardNumber" style="width:100px"> (주민번호 앞 6자리) </td>
+</tr>
+</table>
+<input type="submit" name="submit" value="발권하기" onclick="check();">
+</body>
+</html>

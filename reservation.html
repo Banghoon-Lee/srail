@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css"></link>
+
+    <script language="javascript">
+      function check() {
+        if(document.frm.departure.value=="") {
+          alert("출발지를 선택하세요.");
+          document.frm.departure.focus();
+          return;
+
+        } else if(document.frm.arrival.value=="") {
+          alert("도착지를 선택하세요.");
+          document.frm.arrival.focus();
+          return;
+
+        } else if(document.frm.departureDate.value=="") {
+          alert("출발일을 선택하세요.");
+          document.frm.departureDate.focus();
+          return;
+        }
+      }
+    </script>
+    <title>SRail_승차권 예매</title>
+  </head>
+
+  <body>
+    <div id="m_header">
+      <div class="header_contents">
+        <ul class="globalmenu">
+          <li><a href="memberLogin.html">Login</a></li>
+          <li><a href="memberJoin.html">Join Us</a></li>
+        </ul>
+        <h1 class="logo"><a href="SRail_main.html"><img src="./img/srail.png" alt="이미지가 표시되지 않습니다."></a></h1>
+      </div>
+    </div>
+
+    <div id="m_menu">
+      <div class="dropmenu">
+  	     <ul id="main-menu">
+           <li class="space"> <a href="aboutSrail.html"> ABOUT US </a>
+              <ul id="sub-menu">
+                 <li> <a href="aboutSrail.html"> 회사 소개 </a> </li>
+                 <li> <a href="ceoGreeting.html"> CEO 인사말 </a> </li>
+              </ul>
+           </li>
+           <li> <a href="reservation.html"> TICKETS </a>
+              <ul id="sub-menu">
+                 <li> <a href="reservation.html"> 승차권 예매 </a> </li>
+                 <li> <a href="reservationSelect.html"> 예매 내역 조회 </a> </li>
+                 <li> <a href="reissue.html"> 승차권 예매 변경 </a> </li>
+                 <li> <a href="refund.html"> 승차권 예매 환불 </a> </li>
+              </ul>
+           </li>
+           <li> <a href="notice.html"> CUSTOMER SERVICE </a>
+              <ul id="sub-menu">
+                 <li> <a href="notice.html"> 공지사항 </a> </li>
+                 <li> <a href="faq.html"> FAQ </a> </li>
+                 <li> <a href="voc.html"> VOC </a> </li>
+              </ul>
+           </li>
+          <li> <a href="myInfo.html"> MYPAGE </a>
+             <ul id="sub-menu">
+  	            <li> <a href="myInfo.html"> 내 정보 </a> </li>
+                <li> <a href="myInfoModify.html"> 정보 수정 </a> </li>
+                <li> <a href="memberResign.html"> 회원탈퇴 </a> </li>
+             </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <div>
+     <center> <img src="./img/ktx.png" style="width: 950px; height: 190px;"> </center>
+    </div> -->
+  <div id="m_section">
+    <div class="section_contents">
+      <h1> 승차권 예매 </h1>
+      <br>
+      <form name="frm">
+        <table border="1px">
+
+         <tr>
+           <td class="options"> 열차 종류 </td>
+           <td style="padding-left:20px;">
+             <span><input type="radio" name="train" value="ktx" checked> KTX </span>&nbsp&nbsp&nbsp
+             <span><input type="radio" name="train" value="srt"> SRT</span>&nbsp&nbsp&nbsp
+             <span><input type="radio" name="train" value="sme"> 새마을</span>&nbsp&nbsp&nbsp
+             <span><input type="radio" name="train" value="mgh"> 무궁화</span>
+           </td>
+         </tr>
+
+         <!-- <tr>
+           <td class="options"> 여정 경로 </td>
+           <td style="padding-left:20px;">
+             <input type="radio" name="route" value="oneway" checked> 편도
+             <input type="radio" name="route" value="roundtrip"> 왕복
+           </td>
+         </tr> -->
+
+         <tr>
+           <td class="options"> 출발지 </td>
+           <td style="padding-left:20px;">
+             <input type="text" name="departure" size="30">&nbsp
+             <button style="border:none;height:20px;" name="departureSearch" onclick=""> <img style="height:22px;"src="./img/search.jpg"/> </button>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="options"> 도착지 </td>
+           <td style="padding-left:20px;">
+             <input type="text" name="arrival" size="30">&nbsp
+             <button style="border:none;height:15px;"  name="arrivalSearch" onclick=""> <img style="height:22px;" src="./img/search.jpg"/> </button>
+           </td>
+         </tr>
+
+         <tr>
+           <td class="options"> 출발일 </td>
+           <td style="padding-left:20px;">
+             <input type="date" name="departureDate" size="30">
+           </td>
+         </tr>
+
+         <!-- <tr>
+           <td class="options"> 인원 정보 </td>
+           <td style="padding-left:20px;">
+             <select name="adultPersonnel">
+               	<option value="adult"> 성인 1명 </option>
+               	<option value="성인 1명"> 성인 1명 </option>
+               	<option value="성인 2명"> 성인 2명 </option>
+               	<option value="성인 3명"> 성인 3명 </option>
+               	<option value="성인 4명"> 성인 4명 </option>
+               	<option value="성인 5명"> 성인 5명 </option>
+               	<option value="성인 6명"> 성인 6명 </option>
+               	<option value="성인 7명"> 성인 7명 </option>
+               	<option value="성인 8명"> 성인 8명 </option>
+               	<option value="성인 9명"> 성인 9명 </option>
+             </select>
+
+             <select name="childPersonnel">
+               	<option value="child"> 만 6세 에서 12세 </option>
+               	<option value="어린이 1명"> 어린이 1명 </option>
+               	<option value="어린이 2명"> 어린이 2명 </option>
+               	<option value="어린이 3명"> 어린이 3명 </option>
+               	<option value="어린이 4명"> 어린이 4명 </option>
+               	<option value="어린이 5명"> 어린이 5명 </option>
+               	<option value="어린이 6명"> 어린이 6명 </option>
+               	<option value="어린이 7명"> 어린이 7명 </option>
+               	<option value="어린이 8명"> 어린이 8명 </option>
+               	<option value="어린이 9명"> 어린이 9명 </option>
+             </select>
+
+             <select name="elderPersonnel">
+               	<option value="elder"> 만 65세이상 </option>
+               	<option value="어르신 1명"> 경로 1명 </option>
+               	<option value="어르신 2명"> 경로 2명 </option>
+               	<option value="어르신 3명"> 경로 3명 </option>
+               	<option value="어르신 4명"> 경로 4명 </option>
+               	<option value="어르신 5명"> 경로 5명 </option>
+               	<option value="어르신 6명"> 경로 6명 </option>
+               	<option value="어르신 7명"> 경로 7명 </option>
+               	<option value="어르신 8명"> 경로 8명 </option>
+               	<option value="어르신 9명"> 경로 9명 </option>
+             </select>
+             </td>
+           </tr> -->
+       </table>
+       <br>
+       <center>
+         <input class="section_button"type="submit" name="submit" value="조회하기" onclick="check();">
+         &nbsp; &nbsp;
+         <input class="section_button" type="reset" name="reset" value="다시작성">
+       </center>
+     </form>
+    </div>
+  </div>
+
+      <div id="m_footer">
+        <div class="footer_contents">
+          <div class="footerLogo">
+            <img src="./img/f_Logo.jpg" alt="srail"style="height:80px;">
+          </div>
+          <div class="f_liadrcp">
+            <p class="link">
+              <a href="notice.html"><img class="link" src="./img/Notice.jpg" alt="notice"></a>
+              <img class="vertical" src="./img/Vertical.jpg" alt="vertical">
+              <a href=""><img class="link" src="./img/Terms.jpg" alt="terms"></a>
+              <img class="vertical" src="./img/Vertical.jpg" alt="vertical">
+              <a href=""><img class="link" src="./img/Privacy.jpg" alt="privacy"></a>
+            </p>
+              <address><img src="./img/Address.jpg" alt="address"></address>
+              <p class="copy"><img src="./img/Copyright.jpg" alt="copyright"></p>
+          </div>
+        </div>
+      </div>
+  </body>
+
+</html>

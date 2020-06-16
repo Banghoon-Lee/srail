@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <link type="text/css" rel="stylesheet" href="style.css"></link>
+  <title> SRAIL_회원가입 </title>
+  <script language="javascript">
+  function check() {
+  if(document.frm.memberId.value=="") {
+	  alert("아이디를 입력하세요.");
+	  document.frm.memberId.focus();
+	  return;
+  } else if(document.frm.memberPwd.value=="") {
+	   alert("비밀번호를 입력하세요.");
+	   document.frm.memberPwd.focus();
+	   return;
+  } else if(document.frm.memberPwd2.value=="") {
+	   alert("비밀번호를 입력하세요.");
+	   document.frm.memberPwd2.focus();
+	   return;
+  } else if(document.frm.memberPwd.value!=document.frm.memberPwd2.value) {
+	   alert("비밀번호가 일치하지 않습니다.");
+	   document.frm.memberPwd2.value="";
+	   document.frm.memberPwd2.focus();
+	   return;
+  } else if(document.frm.memberName.value==""){
+	   alert("이름을 입력하세요.");
+	   document.frm.memberName.focus();
+	   return;
+  } else if(document.frm.memberEmail.value=="") {
+	   alert("이메일을 입력하세요.");
+	   document.frm.memberEmail.focus();
+	   return;
+  } else if(document.frm.memberPhonenum.value=="") {
+	   alert("전화번호를 입력하세요.");
+	   document.frm.memberPhonenum.focus();
+	   return;
+  } else if(document.frm.memberCardnum.value=="") {
+	   alert("카드번호를 입력하세요.");
+	   document.frm.memberCardnum.focus();
+	   return;
+  	 }
+  }
+  </script>
+ </head>
+ <body>
+   <div id="m_header">
+     <div class="header_contents">
+       <ul class="globalmenu">
+         <li><a href="memberLogin.html">Login</a></li>
+         <li><a href="memberJoin.html">Join Us</a></li>
+       </ul>
+       <h1 class="logo"><a href="SRail_main.html"><img src="./img/srail.png" alt="이미지가 표시되지 않습니다."></a></h1>
+     </div>
+   </div>
+
+   <div id="m_menu">
+     <div class="dropmenu">
+        <ul id="main-menu">
+          <li class="space"> <a href="aboutSrail.html"> ABOUT US </a>
+             <ul id="sub-menu">
+                <li> <a href="aboutSrail.html"> 회사 소개 </a> </li>
+                <li> <a href="ceoGreeting.html"> CEO 인사말 </a> </li>
+             </ul>
+          </li>
+          <li> <a href="reservation.html"> TICKETS </a>
+             <ul id="sub-menu">
+                <li> <a href="reservation.html"> 승차권 예매 </a> </li>
+                <li> <a href="reservationSelect.html"> 예매 내역 조회 </a> </li>
+                <li> <a href="reissue.html"> 승차권 예매 변경 </a> </li>
+                <li> <a href="refund.html"> 승차권 예매 환불 </a> </li>
+             </ul>
+          </li>
+          <li> <a href="notice.html"> CUSTOMER SERVICE </a>
+             <ul id="sub-menu">
+                <li> <a href="notice.html"> 공지사항 </a> </li>
+                <li> <a href="faq.html"> FAQ </a> </li>
+                <li> <a href="voc.html"> VOC </a> </li>
+             </ul>
+          </li>
+         <li> <a href="myInfo.html"> MYPAGE </a>
+            <ul id="sub-menu">
+               <li> <a href="myInfo.html"> 내 정보 </a> </li>
+               <li> <a href="myInfoModify.html"> 정보 수정 </a> </li>
+               <li> <a href="memberResign.html"> 회원탈퇴 </a> </li>
+            </ul>
+         </li>
+       </ul>
+     </div>
+   </div>
+
+  <div id="signUp_section">
+    <div class="signUp_contents">
+      <h1> 회원가입 </h1>
+      <br>
+      <form name="frm">
+        <table class="signUp_table">
+          <tr>
+            <td class="border_right"> 아이디 </td>
+            <td> <input type="text" name="memberId"> </td>
+          </tr>
+          <tr>
+            <td class="border_right"> 비밀번호 </td>
+            <td> <input type="password" name="memberPwd"> </td>
+          </tr>
+          <tr>
+            <td class="border_right"> 비밀번호 확인 </td>
+            <td> <input type="password" name="memberPwd2"> </td>
+          </tr>
+          <tr>
+            <td class="border_right"> 이름 </td>
+            <td> <input type="text" name="memberName"> </td>
+          </tr>
+          <tr>
+            <td class="border_right"> 이메일 </td>
+            <td> <input type="email" name="memberEmail"> </td>
+          </tr>
+          <tr>
+            <td class="border_right"> 전화번호 </td>
+            <td> <input type="number" name="memberPhonenum"> </td>
+          </tr>
+          <tr>
+            <td class="border_right"> 카드번호 </td>
+            <td> <input type="number" name="memberCardnum"> </td>
+          </tr>
+        </table>
+        <div class="signUp_buttons">
+          <span style="padding-right:10px;"><input type="reset" name="reset" value="다시 작성"></span>
+          <span><input type="submit" name="submit" value="확인" onclick="check();"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+      <div id="m_footer">
+        <div class="footer_contents">
+          <div class="footerLogo">
+            <img src="./img/f_Logo.jpg" alt="srail"style="height:80px;">
+          </div>
+          <div class="f_liadrcp">
+            <p class="link">
+              <a href="notice.html"><img class="link" src="./img/Notice.jpg" alt="notice"></a>
+              <img class="vertical" src="./img/Vertical.jpg" alt="vertical">
+              <a href=""><img class="link" src="./img/Terms.jpg" alt="terms"></a>
+              <img class="vertical" src="./img/Vertical.jpg" alt="vertical">
+              <a href=""><img class="link" src="./img/Privacy.jpg" alt="privacy"></a>
+            </p>
+              <address><img src="./img/Address.jpg" alt="address"></address>
+              <p class="copy"><img src="./img/Copyright.jpg" alt="copyright"></p>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+/* header ----------------------------------------------------------------------*/
+#m_header {
+  width: 100%;
+}
+
+.header_contents {
+  width: 100%;
+  height: 190px;
+}
+
+.header_contents .globalmenu {
+  float: right;
+  padding-bottom: 20px;
+  padding-right: 220px;
+  height: 18px;
+}
+
+.header_contents .globalmenu li {
+  float: left;
+  padding-left: 30px;
+}
+
+.header_contents .globalmenu li a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  color: #4a4a4a;
+}
+
+.header_contents .logo {
+  clear: both;
+  text-align: center;
+  padding-bottom: 28px;
+  height: 32px
+}
+
+/* main menu -------------------------------------------------------------------*/
+#m_menu {
+  width: 100%;
+  position: absolute;
+}
+
+#main-menu {
+  font-size: 18px;
+}
+
+#main-menu {
+  background: #857b66;
+  height: 90px;
+}
+
+.dropmenu li {
+  float: left;
+  width: 350px;
+  text-align: center;
+  display: block;
+}
+
+#main-menu li a {
+  color: #FFFFFF;
+  display: inline-block;
+  line-height: 90px;
+}
+
+.space {
+  margin-left: 70px;
+}
+
+.dropmenu li li {
+  float: none;
+}
+
+#sub-menu {
+  float: none;
+  z-index: 100;
+}
+
+#sub-menu a {
+  font-size: 16px;
+}
+
+#main-menu>li:hover #sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+#sub-menu {
+  position: absolute;
+  background: #182952;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in;
+}
+
+#sub-menu>li>a:hover {
+  text-decoration: underline;
+}
+
+/* main section ----------------------------------------------------------------*/
+#m_section {
+  margin-top: 200px;
+}
+
+#m_section h1 {
+  text-align: center;
+}
+
+.section_contents table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 700px;
+  height: 400px
+}
+
+.section_contents section {
+  width: 150px;
+  height: 25px
+}
+
+.options {
+  text-align: center;
+}
+
+#m_section table {
+  border-collapse: collapse;
+  border: 1px solid #7f7f7f;
+}
+
+.section_button {
+  padding: 4px 6px;
+}
+
+/* login section ---------------------------------------------------------------*/
+#login_section {
+  margin-top: 200px;
+  height: 400px;
+}
+
+#login_section h1 {
+  text-align: center;
+}
+
+.login_contents {
+  border: 5px solid #7f7f7f;
+  padding: 5px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 250px;
+}
+
+.login_form table {
+  margin-bottom: 20px;
+  padding-top: 50px;
+  padding-left: 25px;
+  float: left;
+  border-spacing: 0px 10px;
+}
+
+.login_form input {
+  width: 200px;
+  height: 25px;
+}
+
+.login_form td {
+  padding-left: 50px;
+}
+
+.login_button {
+  padding-top: 60px;
+  padding-right: 114px;
+  float: right;
+}
+
+.login_button input {
+  width: 90px;
+  height: 69px;
+  background-color: #223970;
+  border: none;
+  border-radius: 3%;
+  color: #FFFFFF;
+}
+
+.buttons {
+  width: 100%;
+  height: 50px;
+  clear: both;
+  text-align: right;
+}
+
+.buttons input {
+  padding: 4px 6px;
+  color: #4a4a4a;
+}
+
+/* SignUp section --------------------------------------------------------------*/
+#signUp_section {
+  margin-top: 200px;
+}
+
+#signUp_section h1 {
+  text-align: center;
+}
+
+.signUp_table {
+  border-collapse: collapse;
+  border-top: 3px solid #4a4a4a;
+  border-bottom: 2px solid #7f7f7f;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+.signUp_table input {
+  width: 220px;
+  height: 25px;
+}
+
+.signUp_table td {
+  border-bottom: 1px solid #7f7f7f;
+  padding: 18px 10px;
+}
+
+.signUp_table .border_right {
+  border-right: 1px solid #7f7f7f;
+}
+
+.signUp_buttons {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.signUp_buttons input {
+  padding: 4px 6px;
+}
+
+/* findId section --------------------------------------------------------------*/
+#findId_section {
+  margin-top: 200px;
+}
+
+#findId_section h1 {
+  text-align: center;
+}
+
+.findId_table {
+  border-collapse: collapse;
+  border-top: 3px solid #4a4a4a;
+  border-bottom: 2px solid #7f7f7f;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+.findId_table input {
+  width: 220px;
+  height: 25px;
+}
+
+.findId_table td {
+  border-bottom: 1px solid #7f7f7f;
+  padding: 18px 10px;
+}
+
+.findId_table .border_right {
+  border-right: 1px solid #7f7f7f;
+}
+
+.findId_buttons {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.findId_buttons input {
+  padding: 4px 6px;
+}
+
+/* findPwd section -------------------------------------------------------------*/
+#findPwd_section {
+  margin-top: 200px;
+}
+
+#findPwd_section h1 {
+  text-align: center;
+}
+
+.findPwd_table {
+  border-collapse: collapse;
+  border-top: 3px solid #4a4a4a;
+  border-bottom: 2px solid #7f7f7f;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+.findPwd_table input {
+  width: 220px;
+  height: 25px;
+}
+
+.findPwd_table td {
+  border-bottom: 1px solid #7f7f7f;
+  padding: 18px 10px;
+}
+
+.findPwd_table .border_right {
+  border-right: 1px solid #7f7f7f;
+}
+
+.findPwd_buttons {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.findPwd_buttons input {
+  padding: 4px 6px;
+}
+
+/* notice section --------------------------------------------------------------*/
+#notice_section {
+  margin-top: 200px;
+  height: 300px;
+}
+
+#notice_section h1 {
+  text-align: center;
+}
+
+.notice_table table {
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border-top: 3px solid #4a4a4a;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 2px solid #7f7f7f;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notice_table td {
+  padding: 7px;
+  border-bottom: 1px solid #7f7f7f;
+}
+
+.main_tr {
+  background-color: #ededdd;
+}
+
+.main_tr td {
+  padding: 8px;
+  border-bottom: 2px solid #7f7f7f;
+}
+
+.notice_table .number {
+  width: 100px;
+  border-right: 2px solid #c4c3b7;
+}
+
+.notice_table .title {
+  width: 600px;
+  border-right: 2px solid #c4c3b7;
+}
+
+.notice_table .date {
+  width: 150px;
+}
+
+/* faq section -----------------------------------------------------------------*/
+#faq_section {
+  margin-top: 200px;
+}
+
+#faq_section h1 {
+  text-align: center;
+}
+
+#faq_section hr {
+  border: 2px solid #7f7f7f;
+}
+
+.faq_contents {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq_contents .list-checkbox {
+  display: none;
+}
+
+.faq_contents .title {
+  padding: 10px;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  background: #ededdd;
+  cursor: pointer;
+  display: block;
+}
+
+.faq_contents .desc {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.faq_contents .desc>div {
+  margin: 10px;
+}
+
+.faq_contents .list-checkbox:checked+.title+.desc {
+  max-height: 1000px;
+}
+
+/* voc section --------------------------------------------------------------*/
+#voc_section {
+  margin-top: 200px;
+  height: 300px;
+}
+
+#voc_section h1 {
+  text-align: center;
+}
+
+.voc_table table {
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border-top: 3px solid #4a4a4a;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  border-bottom: 2px solid #7f7f7f;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.voc_table td {
+  padding: 7px;
+  border-bottom: 1px solid #7f7f7f;
+}
+
+.main_tr {
+  background-color: #ededdd;
+}
+
+.main_tr td {
+  padding: 8px;
+  border-bottom: 2px solid #7f7f7f;
+}
+
+.voc_table .number {
+  width: 100px;
+  border-right: 2px solid #c4c3b7;
+}
+
+.voc_table .title {
+  width: 600px;
+  border-right: 2px solid #c4c3b7;
+}
+
+.voc_table .date {
+  width: 150px;
+}
+
+/* main footer -----------------------------------------------------------------*/
+#m_footer {
+  clear: both;
+  width: 100%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.footer_contents {
+  width: 1000px;
+  height: 110px;
+  text-align: center;
+  padding-right: 300px;
+  padding-left: 60px;
+  margin: 0 auto;
+}
+
+.footer_contents .footerLogo {
+  float: left;
+  padding-top: 25px;
+  padding-left: 50px;
+}
+
+.footer_contents .f_liadrcp {
+  padding-top: 35px;
+}
